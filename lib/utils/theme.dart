@@ -1,3 +1,4 @@
+import 'package:dotodo/utils/constants.dart';
 import 'package:flutter/material.dart';
 
 class AppTheme {
@@ -15,6 +16,27 @@ class AppTheme {
       snackBarTheme: const SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
       ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: ThemeData.light().colorScheme.background,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.blue, width: 2.0),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(
+              color: ThemeData.light().colorScheme.error, width: 2.0),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.grey, width: 2.0),
+        ),
+      ),
     );
   }
 
@@ -30,6 +52,27 @@ class AppTheme {
         primaryContainer: Colors.blueAccent,
         secondary: Colors.blueAccent[700],
         onSecondary: Colors.grey[900],
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: ThemeData.light().colorScheme.background,
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.blue, width: 2.0),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(
+              color: ThemeData.light().colorScheme.error, width: 2.0),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(kSmallBorderRadius),
+          borderSide: BorderSide(color: Colors.grey, width: 2.0),
+        ),
       ),
     );
   }

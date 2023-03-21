@@ -37,29 +37,7 @@ class _TextFieldWithPopupState extends State<TextFieldWithPopup> {
       textCapitalization: TextCapitalization.sentences,
       controller: widget._textEditingController,
       decoration: InputDecoration(
-        filled: true,
-        fillColor: Theme.of(context).colorScheme.background,
         hintText: widget._hintText,
-        border: InputBorder.none,
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kSmallBorderRadius),
-          borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kSmallBorderRadius),
-          borderSide: BorderSide(color: Colors.blue, width: 2.0),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kSmallBorderRadius),
-          borderSide: BorderSide(
-            color: Theme.of(context).colorScheme.error,
-            width: 2.0,
-          ),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(kSmallBorderRadius),
-          borderSide: BorderSide(color: Colors.red, width: 2.0),
-        ),
         suffixIcon: PopupMenuButton(
           icon: Icon(
             Icons.arrow_drop_down_rounded,

@@ -14,12 +14,9 @@ class TaskOverviewView extends StatelessWidget {
   const TaskOverviewView({
     super.key,
     required Task task,
-    Category? category,
   }) : _task = task;
-       //_category = category;
 
   final Task _task;
-  //final Category? _category;
 
   @override
   Widget build(BuildContext context) {
@@ -46,6 +43,7 @@ class TaskOverviewView extends StatelessWidget {
                   return AddTaskPage(
                     isEdit: true,
                     task: _task,
+
                   );
                 },
               ));

@@ -27,23 +27,8 @@ class DateTextFormField extends StatelessWidget {
         controller: _dateController,
         readOnly: true,
         decoration: InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).colorScheme.background,
           hintText: 'Task\'s date (optional)',
           border: InputBorder.none,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.blue, width: 2.0),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(
-                color: Theme.of(context).colorScheme.error, width: 2.0),
-          ),
           suffixIcon: InkWell(
             onTap: () {},
             child: Icon(Icons.date_range_outlined),

@@ -25,26 +25,7 @@ class TimeTextFormField extends StatelessWidget {
         onTap: _onTap,
         readOnly: true,
         decoration: InputDecoration(
-          filled: true,
-          fillColor: Theme.of(context).colorScheme.background,
           hintText: 'Task\'s time (optional)',
-          border: InputBorder.none,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.blue, width: 2.0),
-          ),
-          errorBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.red, width: 2.0),
-          ),
-          disabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(kSmallBorderRadius),
-            borderSide: BorderSide(color: Colors.grey, width: 2.0),
-          ),
           suffixIcon: InkWell(
             onTap: () {},
             child: Icon(Icons.access_time_rounded),

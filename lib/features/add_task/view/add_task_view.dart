@@ -49,6 +49,8 @@ class _AddTaskViewState extends State<AddTaskView> {
   @override
   void initState() {
     super.initState();
+    // if we are editing the task, then initilize the text form field
+    // with the corresponding values
     if (widget._isEdit) {
       String? categoryName;
       for (var category
@@ -79,6 +81,8 @@ class _AddTaskViewState extends State<AddTaskView> {
     _taskController.dispose();
     _categoriesController.dispose();
     _descriptionController.dispose();
+    _dateController.dispose();
+    _timeController.dispose();
   }
 
   _onSaved() {
