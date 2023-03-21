@@ -1,7 +1,7 @@
 import 'package:dotodo/providers/theme_provider.dart';
-import 'package:dotodo/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../../utils/utils.dart';
 import '../../../features/home/home.dart';
 import '../../../l10n/l10n.dart';
 import '../../../utils/navigate_to.dart';

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/model/models.dart';
 import '../../add_task/add_task.dart';
-import '../../tasks_overview/tasks_overview_page.dart';
 import '../../tasks_overview/view/tasks_overview_view.dart';
 
 import '../../../blocs/category/category_bloc.dart';
@@ -11,14 +10,14 @@ import '../../../blocs/task/task_bloc.dart';
 
 import '../../../utils/constants.dart';
 
-import '../../widgets/header.dart';
 import '../../widgets/tasks_list_view.dart';
 import '../../widgets/navigational_tile.dart';
 import '../../widgets/empty_tasks_indicator.dart';
 import '../../widgets/error_indicator.dart';
+import './widgets/tasks_calendar_button.dart';
+import './widgets/all_tasks_button.dart';
 import './widgets/app_drawer.dart';
-import './widgets/theme_switcher.dart';
-import './widgets/categories_horisontal_list_view.dart';
+import './widgets/app_bar_extension.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -41,23 +40,9 @@ class HomeView extends StatelessWidget {
         elevation: 0.0,
         actions: [
           // Navigates to the Tasks' calendar screen.
-          IconButton(
-            tooltip: 'Tasks calendar',
-            onPressed: () {},
-            icon: Icon(Icons.calendar_month_rounded),
-          ),
+          TasksCalendarButton(),
           // Navigates to the Tasks screen.
-          IconButton(
-            tooltip: 'All tasks',
-            onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(
-                builder: (context) {
-                  return TasksOverviewPage();
-                },
-              ));
-            },
-            icon: Icon(Icons.task_alt_rounded),
-          ),
+          AllTasksButton(),
         ],
       ),
       body: SafeArea(
@@ -97,62 +82,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                height: size.height * 0.35,
-                child: Stack(
-                  children: [
-                    Container(
-                      height: (size.height * 0.35) - (size.height / 6) / 2,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).colorScheme.onSecondary,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(kBigBorderRadius),
-                        ),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(
-                          left: kScreenMargin, top: kSmallScreenMargin),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Header(
-                                text: 'Hello, Kenan!',
-                                fontSize: 28,
-                                isMargin: false,
-                              ),
-                              Spacer(),
-                              ThemeSwitcher()
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                    BlocBuilder<CategoriesOverviewBloc, CategoryOverviewState>(
-                      builder: (context, state) {
-                        if (state.categories.isEmpty) {
-                          if (state.status == CategoryOverviewStatus.loading) {
-                            return const Center(
-                              child: CircularProgressIndicator(),
-                            );
-                          } else if (state.status ==
-                              CategoryOverviewStatus.success) {
-                            return CategoriesHorizontalListView(
-                              items: state.categories,
-                            );
-                          } else {
-                            return ErrorIndicator();
-                          }
-                        }
-                        return CategoriesHorizontalListView(
-                            items: state.categories);
-                      },
-                    ),
-                  ],
-                ),
-              ),
+              AppBarExtension(),
               Container(
                 margin: EdgeInsets.all(kScreenMargin),
                 child: NavigationalTile(
@@ -197,3 +127,4 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
