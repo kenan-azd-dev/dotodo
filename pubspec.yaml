@@ -1,0 +1,48 @@
+name: dotodo
+description: A TODO app using Flutter and Bloc
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  animated_toggle_switch: ^0.6.2
+  bloc: ^8.1.1
+  equatable: ^2.0.5
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  path: ^1.8.2
+  path_provider: ^2.0.13
+  provider: ^6.0.5
+  rxdart: ^0.27.7
+  shared_preferences: ^2.0.18
+  sqflite: ^2.2.5
+  swipeable_tile: ^2.0.0+3
+  uuid: ^3.0.7
+
+dev_dependencies:
+  bloc_test: ^9.1.1
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-Bold.ttf
+          weight: 700
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
