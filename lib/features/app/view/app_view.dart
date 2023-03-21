@@ -13,6 +13,7 @@ class AppView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<ThemeModeProvider>(builder: (context, themeProvider, _) {
       return MaterialApp(
+        title: 'do ToDo',
         debugShowCheckedModeBanner: false,
         theme: Utils.determineTheme(themeProvider.themeMode, context),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
