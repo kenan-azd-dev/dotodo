@@ -12,6 +12,9 @@ import '../../../data/model/models.dart';
 import '../../widgets/header.dart';
 import '../../widgets/text_field_with_popup.dart';
 
+/// This is a bottom sheet that pops up in the home page when you press
+/// the add button (which appears only when you don't have any tasks).
+/// It also appears as a draggable scrollable bottom sheet in the categories page.
 class AddCategoryView extends StatefulWidget {
   const AddCategoryView({
     super.key,
@@ -46,6 +49,7 @@ class _AddCategoryViewState extends State<AddCategoryView> {
       ),
       height: MediaQuery.of(context).size.height * 0.6,
       child: Scaffold(
+        // to make the white edges of the scaffold behind the container invisble
         backgroundColor: Colors.transparent,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -53,11 +57,17 @@ class _AddCategoryViewState extends State<AddCategoryView> {
             GestureDetector(
               onTap: () async {
                 if (widget._controller != null) {
+                  // the height to which we will animate this widget to.
                   double animateToThisHeight;
+
+                  // if this widget's height is 60% of the screen
+                  // (which means it's expanded), then shrink it
                   if (widget._controller!.size ==
                       kBottomSheetMaxHeightFraction) {
                     animateToThisHeight = kBottomSheetMinHeightFraction;
-                  } else if (widget._controller!.size ==
+                  }
+                  // else if it's shrinked, then expand it
+                  else if (widget._controller!.size ==
                       kBottomSheetMinHeightFraction) {
                     animateToThisHeight = kBottomSheetMaxHeightFraction;
                   } else {
@@ -68,6 +78,7 @@ class _AddCategoryViewState extends State<AddCategoryView> {
                     duration: Duration(milliseconds: 500),
                     curve: Curves.linearToEaseOut,
                   );
+                  // this is called to make the new changes to the height of this widget
                   setState(() {});
                 }
               },
@@ -77,6 +88,8 @@ class _AddCategoryViewState extends State<AddCategoryView> {
                   Header(text: 'Add Category'),
                   widget._controller != null
                       ? Icon(
+                        // if the widget is expanded, show `arrow_drop_up_rounded`
+                        // else (if shrinked) show `arrow_drop_down_rounded`
                           widget._controller!.size ==
                                   kBottomSheetMaxHeightFraction
                               ? Icons.arrow_drop_down_rounded
