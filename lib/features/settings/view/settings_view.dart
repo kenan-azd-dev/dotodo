@@ -1,17 +1,21 @@
-import 'package:dotodo/features/widgets/header.dart';
-import 'package:dotodo/providers/theme_provider.dart';
-import 'package:dotodo/utils/constants.dart';
-import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter/material.dart';
+
+import '../../../providers/theme_provider.dart';
+
+import '../../../utils/constants.dart';
+import '../../../l10n/l10n.dart';
+import '../../widgets/header.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: Text(localization.settings),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: kScreenMargin),
@@ -21,7 +25,7 @@ class SettingsView extends StatelessWidget {
               contentPadding:
                   EdgeInsets.symmetric(horizontal: kScreenMargin * 2),
               leading: Icon(Icons.dark_mode_rounded),
-              title: Text('Theme'),
+              title: Text(localization.theme),
               onTap: () async {
                 await showDialog(
                   context: context,
@@ -30,20 +34,20 @@ class SettingsView extends StatelessWidget {
                       builder: (context, themeProvider, _) {
                         return SimpleDialog(
                           title: Header(
-                            text: 'App Theme',
+                            text: localization.appTheme,
                             isCentered: true,
                           ),
                           children: [
                             ListTile(
-                              title: Text('System default'),
+                              title: Text(localization.themeSystem),
                               onTap: () => themeProvider.mode(ThemeMode.system),
                             ),
                             ListTile(
-                              title: Text('Dark theme'),
+                              title: Text(localization.themeDark),
                               onTap: () => themeProvider.mode(ThemeMode.dark),
                             ),
                             ListTile(
-                              title: Text('Light theme'),
+                              title: Text(localization.themeLight),
                               onTap: () => themeProvider.mode(ThemeMode.light),
                             ),
                           ],
@@ -58,21 +62,21 @@ class SettingsView extends StatelessWidget {
               contentPadding:
                   EdgeInsets.symmetric(horizontal: kScreenMargin * 2),
               leading: Icon(Icons.language_rounded),
-              title: Text('Language'),
+              title: Text(localization.language),
               onTap: () {},
             ),
             ListTile(
               contentPadding:
                   EdgeInsets.symmetric(horizontal: kScreenMargin * 2),
               leading: Icon(Icons.person_rounded),
-              title: Text('Username'),
+              title: Text(localization.username),
               onTap: () {},
             ),
             ListTile(
               contentPadding:
                   EdgeInsets.symmetric(horizontal: kScreenMargin * 2),
               leading: Icon(Icons.password_outlined),
-              title: Text('Password'),
+              title: Text(localization.password),
               onTap: () {},
             ),
           ],

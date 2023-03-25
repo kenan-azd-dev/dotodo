@@ -92,5 +92,14 @@
     "clickOnArrowSuggestions": "Cliquez sur la flèche pour des suggestions.",
     "allTasksTooltip": "Toutes les Tâches.",
     "errorOccured": "Une erreur s'est produite, c'est tout ce que nous savons.",
-    "addCategory": "Ajouter une catégorie"
+    "addCategory": "Ajouter une catégorie",
+
+    "theme": "Le Thème",
+    "appTheme": "Thème de l'Application",
+    "themeSystem": "Défaillance du Système",
+    "themeDark": "Thème sombre",
+    "themeLight": "Thème clair",
+    "language": "Le Lang",
+    "username": "Nom d'Utilisateur",
+    "password": "Mot de Passe"
 }

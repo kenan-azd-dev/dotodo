@@ -416,6 +416,46 @@
     "addCategory": "Add Category",
     "@addCategory": {
       "description": "addCategory"
+    },
+
+    "theme": "Theme",
+    "@theme": {
+      "description": "theme"
+    },
+
+    "appTheme": "App Theme",
+    "@appTheme": {
+      "description": "appTheme"
+    },
+
+    "themeSystem": "System default",
+    "@themeSystem": {
+      "description": "themeSystem"
+    },
+
+    "themeDark": "Dark theme",
+    "@themeDark": {
+      "description": "themeDark"
+    },
+
+    "themeLight": "Light theme",
+    "@themeLight": {
+      "description": "themeLight"
+    },
+
+    "language": "Language",
+    "@language": {
+      "description": "language"
+    },
+
+    "username": "Username",
+    "@username": {
+      "description": "username"
+    },
+
+    "password": "Password",
+    "@password": {
+      "description": "password"
     }
     
 }

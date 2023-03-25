@@ -99,6 +99,15 @@
     "allTasksTooltip": "جميع المهمات.",
 
     "errorOccured": "حدث خطأ ما، هذا كل ما نعرفه.",
-    "addCategory": "إضافة تصنيف"
+    "addCategory": "إضافة تصنيف",
+
+    "theme": "الوضع",
+    "appTheme": "وضع التطبيق",
+    "themeSystem": "الوضع الافتراضي",
+    "themeDark": "الوضع الداكن",
+    "themeLight": "الوضع المُضاء",
+    "language": "اللغة",
+    "username": "اسم المستخدم",
+    "password": "كلمة السر"
 
 }
