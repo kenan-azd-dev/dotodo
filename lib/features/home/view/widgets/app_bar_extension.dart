@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,6 +20,7 @@ class AppBarExtension extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.35,
@@ -35,14 +37,14 @@ class AppBarExtension extends StatelessWidget {
           ),
           Container(
             margin:
-                EdgeInsets.only(left: kScreenMargin, top: kSmallScreenMargin),
+                EdgeInsets.only(left: kScreenMargin, top: kSmallScreenMargin, right: kScreenMargin),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   children: [
                     Header(
-                      text: 'Hello, Kenan!',
+                      text: l10n.hello + ' ' + 'Kenan!',
                       fontSize: 28,
                       isMargin: false,
                     ),

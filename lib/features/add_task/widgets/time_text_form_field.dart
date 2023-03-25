@@ -1,4 +1,5 @@
 
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 
@@ -17,6 +18,7 @@ class TimeTextFormField extends StatelessWidget {
   final void Function()? _onTap;
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Container(
       margin: EdgeInsets.only(bottom: kScreenMargin),
       child: TextFormField(
@@ -25,7 +27,7 @@ class TimeTextFormField extends StatelessWidget {
         onTap: _onTap,
         readOnly: true,
         decoration: InputDecoration(
-          hintText: 'Task\'s time (optional)',
+          hintText: '${localization.dueTime} ${localization.descriptionHelper}',
           suffixIcon: InkWell(
             onTap: () {},
             child: Icon(Icons.access_time_rounded),

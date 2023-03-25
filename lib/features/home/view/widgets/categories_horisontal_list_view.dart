@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:dotodo/utils/navigate_to.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class CategoriesHorizontalListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     final size = MediaQuery.of(context).size;
     return Positioned(
       bottom: 0,
@@ -33,11 +35,11 @@ class CategoriesHorizontalListView extends StatelessWidget {
                 left: kScreenMargin, bottom: 14, right: kScreenMargin),
             child: _items.isEmpty
                 ? Text(
-                    'You have no categories yet.\nStart adding some!',
+                    l10n.yourCategoriesEmpty,
                     style: TextStyle(fontSize: 18),
                   )
                 : NavigationalTile(
-                    title: 'Categories',
+                    title: l10n.categories,
                     onTap: () => Navigator.of(context)
                         .pushNamed(NavigateTo.categoriesPage),
                   ),

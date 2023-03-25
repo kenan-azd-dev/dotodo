@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:uuid/uuid.dart';
@@ -38,6 +39,7 @@ class _AddCategoryViewState extends State<AddCategoryView> {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Container(
       padding: EdgeInsets.all(kScreenMargin).copyWith(top: 0),
       decoration: BoxDecoration(
@@ -85,7 +87,7 @@ class _AddCategoryViewState extends State<AddCategoryView> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Header(text: 'Add Category'),
+                  Header(text: localization.addCategory),
                   widget._controller != null
                       ? Icon(
                         // if the widget is expanded, show `arrow_drop_up_rounded`
@@ -102,7 +104,8 @@ class _AddCategoryViewState extends State<AddCategoryView> {
             ),
             TextFieldWithPopup(
               textEditingController: _textEditingController,
-              hintText: 'Category\'s name',
+              hintText: localization.categoryHelperDialog,
+              // TODO: implement this localization
               tooltip: 'Example categories',
               onSelected: (value) {
                 setState(() {
@@ -126,7 +129,7 @@ class _AddCategoryViewState extends State<AddCategoryView> {
                             );
                       },
                 child: Text(
-                  'Save',
+                  localization.add,
                   style: TextStyle(fontSize: 16),
                 ),
                 style: ButtonStyle(

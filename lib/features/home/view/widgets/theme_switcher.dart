@@ -15,8 +15,6 @@ class ThemeSwitcher extends StatelessWidget {
     return Consumer<ThemeModeProvider>(
       builder: (context, themeProvider, _) {
         return Container(
-          margin: EdgeInsets.symmetric(
-              horizontal: kScreenMargin),
           height: 30,
           width: 90,
           child: AnimatedToggleSwitch.rolling(

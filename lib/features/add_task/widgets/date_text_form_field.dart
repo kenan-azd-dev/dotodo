@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../utils/constants.dart';
 
@@ -20,6 +21,7 @@ class DateTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Container(
       margin: EdgeInsets.only(bottom: kScreenMargin),
       child: TextFormField(
@@ -27,7 +29,7 @@ class DateTextFormField extends StatelessWidget {
         controller: _dateController,
         readOnly: true,
         decoration: InputDecoration(
-          hintText: 'Task\'s date (optional)',
+          hintText: '${localization.dueDate} ${localization.descriptionHelper}',
           border: InputBorder.none,
           suffixIcon: InkWell(
             onTap: () {},
@@ -36,6 +38,7 @@ class DateTextFormField extends StatelessWidget {
         ),
         validator: (value) {
           if (_date == null && _timeOfDay != null) {
+            // TODO: implement this localization
             return 'You have to specify a date when you pick a time.';
           }
           return null;

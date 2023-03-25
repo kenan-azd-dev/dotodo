@@ -9,6 +9,7 @@ import '../../../blocs/category/category_state.dart';
 import '../../../blocs/task/task_bloc.dart';
 
 import '../../../utils/constants.dart';
+import '../../../l10n/l10n.dart';
 
 import '../../widgets/tasks_list_view.dart';
 import '../../widgets/navigational_tile.dart';
@@ -24,7 +25,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final l10n = context.l10n;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.of(context).push(
@@ -56,8 +57,8 @@ class HomeView extends StatelessWidget {
                   ScaffoldMessenger.of(context)
                     ..hideCurrentSnackBar()
                     ..showSnackBar(
-                      const SnackBar(
-                        content: Text('There was an error loading categories.'),
+                      SnackBar(
+                        content: Text(l10n.loadingCategoriesError),
                       ),
                     );
                 }
@@ -71,8 +72,8 @@ class HomeView extends StatelessWidget {
                   ScaffoldMessenger.of(context)
                     ..hideCurrentSnackBar()
                     ..showSnackBar(
-                      const SnackBar(
-                        content: Text('There was an error loading tasks.'),
+                      SnackBar(
+                        content: Text(l10n.loadingTasksError),
                       ),
                     );
                 }
@@ -86,7 +87,7 @@ class HomeView extends StatelessWidget {
               Container(
                 margin: EdgeInsets.all(kScreenMargin),
                 child: NavigationalTile(
-                  title: 'Your Ongoing Tasks',
+                  title: l10n.yourOngoingTasks,
                   isScaffoldBackground: true,
                   onTap: () => Navigator.of(context).push(
                     MaterialPageRoute(
@@ -127,4 +128,3 @@ class HomeView extends StatelessWidget {
     );
   }
 }
-

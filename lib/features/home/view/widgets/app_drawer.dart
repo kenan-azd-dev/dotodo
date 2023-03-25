@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../../utils/navigate_to.dart';
 
@@ -8,6 +9,7 @@ class AppDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     final size = MediaQuery.of(context).size;
     return Drawer(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -33,18 +35,18 @@ class AppDrawer extends StatelessWidget {
               children: [
                 ListTile(
                   leading: Icon(Icons.settings_rounded),
-                  title: Text('Settings'),
+                  title: Text(localization.settings),
                   trailing: Icon(Icons.arrow_forward_ios_rounded),
                   onTap: () => Navigator.of(context).pushNamed(NavigateTo.settingsPage),
                 ),
                 ListTile(
                   leading: Icon(Icons.star_rate_rounded),
-                  title: Text('Rate the app'),
+                  title: Text(localization.rateTheApp),
                   onTap: () {},
                 ),
                 ListTile(
                   leading: Icon(Icons.question_mark_rounded),
-                  title: Text('About'),
+                  title: Text(localization.about),
                   onTap: () {},
                 ),
               ],

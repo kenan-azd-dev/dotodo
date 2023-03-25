@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../utils/constants.dart';
 
@@ -33,6 +34,7 @@ class _TextFieldWithPopupState extends State<TextFieldWithPopup> {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return TextFormField(
       textCapitalization: TextCapitalization.sentences,
       controller: widget._textEditingController,
@@ -69,7 +71,7 @@ class _TextFieldWithPopupState extends State<TextFieldWithPopup> {
       ),
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Cannot be empty';
+          return localization.categoryError1;
         }
         return null;
       },

@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class ErrorIndicator extends StatelessWidget {
@@ -7,6 +8,7 @@ class ErrorIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return Column(
       children: [
         Icon(
@@ -16,7 +18,7 @@ class ErrorIndicator extends StatelessWidget {
         ),
         SizedBox(height: 8.0),
         Text(
-          'An error occured!\nThat\'s all we know.',
+          l10n.errorOccured,
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 18,

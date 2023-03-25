@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:intl/intl.dart';
 import 'package:uuid/uuid.dart';
 import 'package:flutter/material.dart';
@@ -164,13 +165,15 @@ class _AddTaskViewState extends State<AddTaskView> {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Scaffold(
       appBar: AppBar(
         title: widget._isEdit
-            ? Text('Edit Task')
+            ? Text(localization.editTask)
             : widget._category != null
+                // TODO: implement this localization
                 ? Text('Add a task to ${widget._category!.name}')
-                : Text('Add a task'),
+                : Text(localization.addTask),
       ),
       body: Padding(
         padding: EdgeInsets.only(
@@ -188,7 +191,8 @@ class _AddTaskViewState extends State<AddTaskView> {
                   margin: EdgeInsets.only(bottom: kScreenMargin),
                   child: TextFieldWithPopup(
                     textEditingController: _categoriesController,
-                    hintText: 'Category\'s name',
+                    hintText: localization.category,
+                    // TODO: implement this localization
                     tooltip: 'Categories examples',
                     onSelected: (value) {
                       setState(() {
@@ -244,6 +248,7 @@ class _AddTaskViewState extends State<AddTaskView> {
                   descriptionController: _descriptionController),
               !widget._isEdit
                   ? SaveButton(
+                      title: localization.add,
                       onPressed: () {
                         _onSaved();
                       },
@@ -252,7 +257,7 @@ class _AddTaskViewState extends State<AddTaskView> {
                       onPressed: () {
                         _onEdit();
                       },
-                      title: 'Edit',
+                      title: localization.edit,
                     )
             ],
           ),
@@ -265,7 +270,7 @@ class _AddTaskViewState extends State<AddTaskView> {
 class SaveButton extends StatelessWidget {
   const SaveButton({
     super.key,
-    String title = 'Save',
+    required String title,
     required void Function()? onPressed,
   })  : _onPressed = onPressed,
         _title = title;

@@ -55,7 +55,7 @@ class AppTheme {
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: ThemeData.light().colorScheme.background,
+        fillColor: ThemeData.dark().colorScheme.background,
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(kSmallBorderRadius),
           borderSide: BorderSide(color: Colors.blueGrey, width: 2.0),

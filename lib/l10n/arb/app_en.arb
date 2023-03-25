@@ -1,7 +1,421 @@
 {
     "@@locale": "en",
-    "counterAppBarTitle": "Counter",
-    "@counterAppBarTitle": {
-        "description": "Text shown in the AppBar of the Counter Page"
+    "loadingCategoriesError": "An error occured while loading the categories.",
+    "@loadingCategoriesError": {
+        "description": "Text shown in the snackbar in HomePage when an error occurs while loading the categories"
+    },
+    "loadingTasksError": "An error occured while loading the tasks.",
+    "@loadingTasksError": {
+        "description": "Text shown in the snackbar in HomePage when an error occurs while loading the tasks"
+    },
+    "hello": "Hello",
+    "@hello": {
+        "description": "Just hello"
+    },
+
+    "create": "Create",
+    "@create": {
+      "description": "create"
+    },
+
+    "categories": "Categories",
+    "@categories": {
+      "description": "categories"
+    },
+
+    "yourCategoriesEmpty": "You haven't added any categories yet.\nStart adding some.",
+    "@yourCategoriesEmpty": {
+      "description": "yourCategoriesEmpty"
+    },
+
+    "tasks": "Tasks",
+    "@tasks": {
+      "description": "tasks"
+    },
+
+    "createCategory": "Create a Category",
+    "@createCategory": {
+      "description": "createCategory"
+    },
+
+    "categoryHelperDialog": "Enter the title of your category.",
+    "@categoryHelperDialog": {
+      "description": "categoryHelperDialog"
+    },
+
+    "categoryAlreadyExists": "Category already exists",
+    "@categoryAlreadyExists": {
+      "description": "categoryAlreadyExists"
+    },
+
+    "yourTasks": "Your Tasks",
+    "@yourTasks": {
+      "description": "yourTasks"
+    },
+
+    "yourTasksEmpty": "You haven't added any tasks yet.\nStart adding some.",
+    "@yourTasksEmpty": {
+      "description": "yourTasksEmpty"
+    },
+
+    "settings": "Settings",
+    "@settings": {
+      "description": "settings"
+    },
+
+    "rateTheApp": "Rate the app",
+    "@rateTheApp": {
+      "description": "rateTheApp"
+    },
+
+    "toggleDark": "Dark Mode",
+    "@toggleDark": {
+      "description": "toggleDark"
+    },
+
+    "changeLanguage": "Change Language",
+    "@changeLanguage": {
+      "description": "changeLanguage"
+    },
+
+    "changeName": "Change Name",
+    "@changeName": {
+      "description": "changeName"
+    },
+
+    "chooseLang": "Choose a Language",
+    "@chooseLang": {
+      "description": "chooseLang"
+    },
+
+    "editName": "Edit Your Name",
+    "@editName": {
+      "description": "editName"
+    },
+
+    "nameNickname": "Your name or nickname",
+    "@nameNickname": {
+      "description": "nameNickname"
+    },
+
+    "nameHelper": "Kindly enter your name or nickname",
+    "@nameHelper": {
+      "description": "nameHelper"
+    },
+
+    "edit": "Edit",
+    "@edit": {
+      "description": "edit"
+    },
+
+    "goBack": "Go Back",
+    "@goBack": {
+      "description": "goBack"
+    },
+
+    "addTask": "Add a Task",
+    "@addTask": {
+      "description": "addTask"
+    },
+
+    "editTask": "Edit Task",
+    "@editTask": {
+      "description": "editTask"
+    },
+
+    "title": "Task's title",
+    "@title": {
+      "description": "title"
+    },
+
+    "titleHelper": "This will be the title of your task",
+    "@titleHelper": {
+      "description": "titleHelper"
+    },
+
+    "titleError": "Title cannot be empty!",
+    "@titleError": {
+      "description": "titleError"
+    },
+
+    "editCategory": "Edit Category",
+    "@editCategory": {
+      "description": "editCategory"
+    },
+
+    "categoryEditDialog": "Edit the title of your category.",
+    "@categoryEditDialog": {
+      "description": "categoryEditDialog"
+    },
+
+    "category": "Category",
+    "@category": {
+      "description": "category"
+    },
+
+    "categoryHelper": "Every task should have a category",
+    "@categoryHelper": {
+      "description": "categoryHelper"
+    },
+
+    "categoryError1": "Category cannot be empty!",
+    "@categoryError1": {
+      "description": "categoryError1"
+    },
+
+    "categoryError2": "Category's length shouldn't be more than 20 charecters!",
+    "@categoryError2": {
+      "description": "categoryError2"
+    },
+
+
+    "date": "Date",
+    "@date": {
+      "description": "date"
+    },
+
+    "time": "Time",
+    "@time": {
+      "description": "time"
+    },
+
+    "description": "Description",
+    "@description": {
+      "description": "description"
+    },
+
+    "descriptionHelper": "(Optional)",
+    "@descriptionHelper": {
+      "description": "descriptionHelper"
+    },
+
+    "add": "Add",
+    "@add": {
+      "description": "add"
+    },
+
+    "nameError1": "Name cannot be empty!",
+    "@nameError1": {
+      "description": "nameError1"
+    },
+
+    "nameError2": "Name's length shouldn't be more than 20 charecters!",
+    "@nameError2": {
+      "description": "nameError2"
+    },
+
+    "todayTasks": "Today's Tasks",
+    "@todayTasks": {
+      "description": "todayTasks"
+    },
+
+    "todayTasksEmpty": "You don't have any tasks today.\nEnjoy.",
+    "@todayTasksEmpty": {
+      "description": "todayTasksEmpty"
+    },
+
+    "dueTime": "Due Time",
+    "@dueTime": {
+      "description": "dueTime"
+    },
+
+    "dueDate": "Due Date",
+    "@dueDate": {
+      "description": "dueDate"
+    },
+
+    "dueTimeEmpty": "You didn't provide a due time for this task",
+    "@dueTimeEmpty": {
+      "description": "dueTimeEmpty"
+    },
+
+    "dueDateEmpty": "You didn't provide a due date for this task",
+    "@dueDateEmpty": {
+      "description": "dueDateEmpty"
+    },
+
+    "descriptionEmpty": "You didn't provide a description for this task",
+    "@descriptionEmpty": {
+      "description": "descriptionEmpty"
+    },
+
+    "deleteTaskDialogTitle": "Are you sure you want to delete this task?",
+    "@deleteTaskDialogTitle": {
+      "description": "deleteTaskDialogTitle"
+    },
+
+    "yes": "Yes",
+    "@yes": {
+      "description": "yes"
+    },
+
+    "deleteCategoryDialogTitle": "Are you sure you want to delete this Category?",
+    "@deleteCategoryDialogTitle": {
+      "description": "deleteCategoryDialogTitle"
+    },
+
+    "deleteCategoryDialogContent": "All tasks under this category will be deleted too.",
+    "@deleteCategoryDialogContent": {
+      "description": "deleteCategoryDialogContent"
+    },
+
+    "dailyNotifications": "Daily Quotes Notifications",
+    "@dailyNotifications": {
+      "description": "dailyNotifications"
+    },
+
+    "categoryTaskEmpty": "You haven't added any task to this category.\nStart adding some.",
+    "@categoryTaskEmpty": {
+      "description": "categoryTaskEmpty"
+    },
+
+    "allowNotificationsDialog": "Do you want to allow this app to send you notifications?",
+    "@allowNotificationsDialog": {
+      "description": "allowNotificationsDialog"
+    },
+
+    "manageYourTasks": "Manage Your Tasks",
+    "@manageYourTasks": {
+      "description": "manageYourTasks"
+    },
+    
+    "manageYourTasksDescription": "Add, edit, delete, categorize your tasks the way you want!",
+    "@manageYourTasksDescription": {
+      "description": "manageYourTasksDescription"
+    },
+
+    "availableLanguages": "Available in 3 Languages",
+    "@availableLanguages": {
+      "description": "availableLanguages"
+    },
+
+    "availableLanguagesDescription": "English, French and Arabic",
+    "@availableLanguagesDescription": {
+      "description": "availableLanguagesDescription"
+    },
+
+    "dontMissOut": "Don't Miss Out!",
+    "@dontMissOut": {
+      "description": "dontMissOut"
+    },
+
+    "dontMissOutDescription": "When specifying the due date and the due date time of your task you'll be notified on time.",
+    "@dontMissOutDescription": {
+      "description": "dontMissOutDescription"
+    },
+
+    "letsGetStarted": "Let's get started",
+    "@letsGetStarted": {
+      "description": "letsGetStarted"
+    },
+
+    "next": "Next",
+    "@next": {
+      "description": "next"
+    },
+
+    "skip": "Skip",
+    "@skip": {
+      "description": "skip"
+    },
+
+    "tasksCalendar": "Tasks Calendar",
+    "@tasksCalendar": {
+      "description": "tasksCalendar"
+    }, 
+
+    "submit": "Let's Go!",
+    "@submit": {
+      "description": "submit"
+    },
+
+    "rate": "Enjoying do ToDo? Kindly, rate it on Play Store.",
+    "@rate": {
+      "description": "Rate Our App On Play Store"
+    },
+
+    "rateDescription": "We hope that you're having a good time with do Todo.\nWhether you like the app or feel we could do better, we want to know!",
+    "@rateDescription": {
+      "description": "rateDescription"
+    },
+    
+    "proceed": "Proceed",
+    "@proceed": {
+      "description": "proceed"
+    },
+
+    "about": "About",
+    "@about": {
+      "description": "about"
+    },
+
+    "newVersion": "New Version",
+    "@newVersion": {
+      "description": "newVersion"
+    },
+
+    "newVersionTitle": "A New Update is Available!",
+    "@newVersionTitle": {
+      "description": "newVersionTitle"
+    },
+
+    "features": "do ToDo is a simple, straightforward task mangagment app deveolped using Flutter.\n\nApp features:\n 1.  Add tasks and specifiy a description, due date and due time to it.\n 2.  For the tasks to be more organized, you have to specifiy the category for evey task you add.\n 3.   When specifing the due date and due date for the task, you will recieve a notification on the selected date and time.\n 4.  Available in three languages, English, French and Arabic.\n 5.  Available in dark mode.\n",
+    "@features": {
+      "description": "features"
+    },
+
+    "developedBy": "Developed with love by:\nKenan Abo Zaineddin.\n",
+    "@developedBy": {
+      "description": "developedBy"
+    },
+
+    "linkedIn": "My LinkedIn Account",
+    "@linkedIn": {
+      "description": "linkedIn"
+    },
+
+    "yourOngoingTasks": "Your Ongoing Tasks",
+    "@yourOngoingTasks": {
+      "description": "yourOngoingTasks"
+    },
+    "goodJobCompletedTasks": "Good Job!\nLooks like you've completed all your tasks",
+    "@goodJobCompletedTasks": {
+      "description": "goodJobCompletedTasks"
+    },
+
+    "allTasks": "All Tasks",
+    "@allTasks": {
+      "description": "allTasks"
+    },
+
+    "completedTasks": "Completed Tasks",
+    "@completedTasks": {
+      "description": "completedTasks"
+    },
+
+    "ongoingTasks": "Ongoing Tasks",
+    "@ongoingTasks": {
+      "description": "ongoingTasks"
+    },
+
+    "clickOnArrowSuggestions": "Click on the arrow for suggestions.",
+    "@clickOnArrowSuggestions": {
+      "description": "clickOnArrowSuggestions"
+    },
+
+    "allTasksTooltip": "All Tasks.",
+    "@allTasksTooltip": {
+      "description": "allTasksTooltip"
+    },
+
+    "errorOccured": "An error occured, that's all we know",
+    "@errorOccured": {
+      "description": "errorOccured"
+    },
+
+    "addCategory": "Add Category",
+    "@addCategory": {
+      "description": "addCategory"
     }
+    
 }

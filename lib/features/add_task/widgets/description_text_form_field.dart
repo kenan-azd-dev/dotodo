@@ -1,4 +1,5 @@
 
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:dotodo/utils/constants.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class DescriptionTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Container(
       margin: EdgeInsets.only(bottom: kScreenMargin),
       child: TextFormField(
@@ -19,7 +21,7 @@ class DescriptionTextFormField extends StatelessWidget {
         controller: _descriptionController,
         maxLines: 3,
         decoration: InputDecoration(
-          hintText: 'Task\'s description (optional)',
+          hintText: '${localization.description} ${localization.descriptionHelper}',
         ),
       ),
     );

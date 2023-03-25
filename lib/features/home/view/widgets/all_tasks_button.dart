@@ -1,3 +1,4 @@
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import '../../../tasks_overview/tasks_overview_page.dart';
 
@@ -9,8 +10,9 @@ class AllTasksButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
     return IconButton(
-      tooltip: 'All tasks',
+      tooltip: l10n.allTasks,
       onPressed: () {
         Navigator.of(context).push(
           MaterialPageRoute(

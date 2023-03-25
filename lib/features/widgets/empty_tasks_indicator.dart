@@ -1,5 +1,6 @@
-import 'package:dotodo/utils/constants.dart';
 import 'package:flutter/material.dart';
+import '../../l10n/l10n.dart';
+import '../../utils/constants.dart';
 
 class EmptyTasksIndicator extends StatelessWidget {
   const EmptyTasksIndicator({
@@ -8,6 +9,8 @@ class EmptyTasksIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = context.l10n;
+
     return Column(
       children: [
         Container(
@@ -19,7 +22,7 @@ class EmptyTasksIndicator extends StatelessWidget {
           ),
         ),
         Text(
-          'You haven\'t added any tasks yet.\nStart adding some!',
+          l10n.yourTasksEmpty,
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 18),
         ),

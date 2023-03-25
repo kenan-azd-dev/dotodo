@@ -15,6 +15,7 @@ class AppView extends StatelessWidget {
       return MaterialApp(
         title: 'do ToDo',
         debugShowCheckedModeBanner: false,
+        locale: Locale('en'),
         theme: Utils.determineTheme(themeProvider.themeMode, context),
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,

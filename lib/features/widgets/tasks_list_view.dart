@@ -1,15 +1,17 @@
-import 'package:dotodo/blocs/task/task_bloc.dart';
-import 'package:dotodo/data/model/models.dart';
-import 'package:dotodo/features/task_overview/task_overview.dart';
-import 'package:dotodo/features/widgets/sub_header.dart';
-import '../widgets/custom_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:swipeable_tile/swipeable_tile.dart';
 import 'package:intl/intl.dart';
+import 'package:swipeable_tile/swipeable_tile.dart';
+
+import '../task_overview/task_overview.dart';
+
+import '../widgets/custom_dialog.dart';
+import '../widgets/sub_header.dart';
+
+import '../../blocs/task/task_bloc.dart';
+import '../../data/model/models.dart';
 
 import '../../utils/utils.dart';
-
 import '../../utils/constants.dart';
 
 class TasksList extends StatelessWidget {

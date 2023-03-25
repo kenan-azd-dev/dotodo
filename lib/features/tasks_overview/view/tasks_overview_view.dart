@@ -1,5 +1,6 @@
 import 'package:dotodo/blocs/task/task_bloc.dart';
 import 'package:dotodo/blocs/task/tasks_filter.dart';
+import 'package:dotodo/l10n/l10n.dart';
 import 'package:dotodo/utils/constants.dart';
 import 'package:dotodo/data/model/models.dart';
 import 'package:dotodo/features/widgets/tasks_list_view.dart';
@@ -11,9 +12,10 @@ class TasksOverviewView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localization = context.l10n;
     return Scaffold(
       appBar: AppBar(
-        title: Text('All Tasks'),
+        title: Text(localization.allTasks),
         actions: [TasksFilterButton()],
       ),
       body: Column(
@@ -43,7 +45,7 @@ class TasksFilterButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+final localization = context.l10n;
     return PopupMenuButton(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(kSmallBorderRadius),
@@ -56,15 +58,15 @@ class TasksFilterButton extends StatelessWidget {
       itemBuilder: (context) {
         return [
           PopupMenuItem(
-            child: Text('All Tasks'),
+            child: Text(localization.allTasks),
             value: TasksViewFilter.all,
           ),
           PopupMenuItem(
-            child: Text('Completed Only'),
+            child: Text(localization.completedTasks),
             value: TasksViewFilter.completedOnly,
           ),
           PopupMenuItem(
-            child: Text('Ongoing Only'),
+            child: Text(localization.ongoingTasks),
             value: TasksViewFilter.activeOnly,
           ),
         ];
